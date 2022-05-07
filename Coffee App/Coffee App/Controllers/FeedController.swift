@@ -34,13 +34,6 @@ class FeedController: UIViewController{
         return label
     }()
     
-    let chatbutton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Join the coffee conversation...", for: .normal)
-        button.addTarget(self, action: #selector(chat), for: .touchUpInside)
-        button.setTitleColor(.systemGreen, for: .normal)
-        return button
-    }()
     
     let chatty: UITextField = {
         let text = UITextField()
@@ -166,10 +159,6 @@ class FeedController: UIViewController{
         
     }
     
-    @objc func chat(){
-        let subcontroller = ChatController()
-        present(subcontroller, animated: true, completion: nil)
-    }
 }
 
 extension FeedController: UITableViewDelegate{
